@@ -48,9 +48,10 @@ public class PagoController {
         return ResponseEntity.status(HttpStatus.OK).body(service.getPagosByIdAlumno(id));
     }
 
-    @GetMapping("/custom")
-    public ResponseEntity<?> custom(Long id , @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate localDate){
-      return ResponseEntity.status(HttpStatus.OK).body(service.custom( id , localDate));
+    @GetMapping("/consulta/{id}/{fecha}")
+    public ResponseEntity<?> custom(@PathVariable Long id ,@PathVariable String fecha){
+        LocalDate date = LocalDate.parse(fecha);
+      return ResponseEntity.status(HttpStatus.OK).body(service.custom( id , date));
     }
 
 }
