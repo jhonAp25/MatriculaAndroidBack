@@ -18,6 +18,8 @@ public class Pago {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
+
     private LocalDate fechaPago;
     private String descripcion;
     private Boolean estado;

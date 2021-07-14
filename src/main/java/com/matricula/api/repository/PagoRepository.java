@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -13,5 +14,5 @@ public interface PagoRepository extends JpaRepository<Pago, Long> {
     List<Pago> findByAlumno_Id(Long id);
 
 
-    List<Pago> findByMensualidadIsBetween(Long id , Date fechaIn , Date fechaFin);
+    List<Pago> findByEstadoAndAlumno_IdAndMensualidad_FechaFinalBefore(Boolean estado , Long id , LocalDate mes);
 }
