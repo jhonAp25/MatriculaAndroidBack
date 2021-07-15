@@ -10,6 +10,7 @@ import java.util.List;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     Boolean existsUsuarioByUsuarioAndContrasenia(String username, String password);
+
     Usuario findByUsuario(String user);
 
 }

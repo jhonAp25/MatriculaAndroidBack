@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -22,7 +23,9 @@ public class Pago {
 
     private LocalDate fechaPago;
     private String descripcion;
-    private Boolean estado;
+
+    @Column(columnDefinition = "boolean default false")
+    private Boolean estado ;
 
     @ManyToOne
     private Mensualidad mensualidad;
@@ -30,8 +33,8 @@ public class Pago {
     @ManyToOne
     private Alumno alumno;
 
-    @PrePersist
-    void Prepersit() {
-        estado = false;
-    }
+//    @PrePersist
+//    void Prepersit() {
+//        estado = false;
+//    }
 }

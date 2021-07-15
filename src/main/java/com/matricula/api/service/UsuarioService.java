@@ -17,9 +17,11 @@ public class UsuarioService  {
     @Autowired
     UsuarioRepository repository;
 
-    public ResponseEntity<?> login(String usuario , String contrasenia){
+    public ResponseEntity<?> login(Usuario user){
+        String usuario = user.getUsuario();
+        String contra = user.getContrasenia();
         Map<String, Object> resp = new HashMap<>();
-        if(repository.existsUsuarioByUsuarioAndContrasenia(usuario, contrasenia)){
+        if(repository.existsUsuarioByUsuarioAndContrasenia(usuario, contra)){
             resp.put("message", "Credenciales válidas");
             resp.put("Usuario", repository.findByUsuario(usuario));
 
