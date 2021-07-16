@@ -11,5 +11,8 @@ public interface AlumnoRepository extends JpaRepository<Alumno, Long> {
 
     List<Alumno> findByNombreContainsOrApellidoContains(String n, String a);
 
+    List<Alumno> findAllByGrado_Id(Long id);
+
+
     Alumno findByNombre(String n);
 }

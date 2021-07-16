@@ -45,4 +45,10 @@ public class AlumnoController {
         if (!service.getById(id)) return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("No existe el alumno.");
         return ResponseEntity.status(HttpStatus.OK).body(service.changeStatus(id));
     }
+
+    @GetMapping(value = "/buscarGrado")
+    public ResponseEntity<?> buscarGrado(@RequestParam Long id){
+        List<Alumno> find = service.alumnoXgrado(id);
+        return ResponseEntity.status(HttpStatus.OK).body(find);
+    }
 }

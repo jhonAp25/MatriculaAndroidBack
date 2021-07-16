@@ -72,4 +72,8 @@ public class AlumnoService {
 
         return "Se actualizó el estado del alumno "+alumno.getNombre();
     }
+
+    public List<Alumno> alumnoXgrado(Long id){
+        return repository.findAllByGrado_Id(id);
+    }
 }
