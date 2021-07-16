@@ -19,6 +19,10 @@ insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-
 insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-11-30', '2021-11-01', 'Noviembre', '250');
 insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-12-31', '2021-12-01', 'Siciembre', '250');
 
+
+
+insert into docente (nombre, apellido, correo, telefono) values ('Jose Daniel' , 'Alvarado Saucedo' , 'jose@gmail.com' , '978564357' );
+
 insert into alumno(nombre, apellido, telefono, dni, correo, estado, grado_id)  values ('Jhon Elvis', 'Apaza Larico', '999999999', '12345678', 'jhonAP@gmail.com', true, 1);
 insert into alumno(nombre, apellido, telefono, dni, correo, estado, grado_id)  values ('Alumno01', 'Alvarado Gutierrez', '999258999', '12345678', 'Alumno01@gmail.com', true, 1);
 insert into alumno(nombre, apellido, telefono, dni, correo, estado, grado_id)  values ('Alumno02', 'Noriega De la Cruz', '2589874999', '12345678', 'Alumno02@gmail.com', true, 1);
