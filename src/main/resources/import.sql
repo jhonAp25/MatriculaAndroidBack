@@ -17,7 +17,7 @@ insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-
 insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-09-30', '2021-09-01', 'Septiembre', '250');
 insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-10-31', '2021-10-01', 'Octubre', '250');
 insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-11-30', '2021-11-01', 'Noviembre', '250');
-insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-12-31', '2021-12-01', 'Siciembre', '250');
+insert into mensualidad ( fecha_final, fecha_inicio, mes, monto) values ( '2021-12-31', '2021-12-01', 'Diciembre', '250');
 
 
 
